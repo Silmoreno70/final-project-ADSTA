@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.0360" tests="10" failures="4">
+  <testsuite name="Root Suite" timestamp="2021-12-13T00:40:22" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="express_authentication" timestamp="2021-12-13T00:40:22" tests="7" file="C:\Users\silmo.DESKTOP-578FB84\Documents\Final Project ADSTA\proyect\test\index.spec.js" time="4.5220" failures="2">
+    <testcase name="express_authentication Should generate an API key and add it to file" time="0.5190" classname="Should generate an API key and add it to file">
+    </testcase>
+    <testcase name="express_authentication &quot;before each&quot; hook for &quot;Should generate 5 unique API Keys&quot;" time="2.0030" classname="&quot;before each&quot; hook for &quot;Should generate 5 unique API Keys&quot;">
+      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\silmo.DESKTOP-578FB84\Documents\Final Project ADSTA\proyect\test\index.spec.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\silmo.DESKTOP-578FB84\Documents\Final Project ADSTA\proyect\test\index.spec.js)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)]]></failure>
+    </testcase>
+    <testcase name="express_authentication &quot;after each&quot; hook for &quot;Should generate 5 unique API Keys&quot;" time="2.0000" classname="&quot;after each&quot; hook for &quot;Should generate 5 unique API Keys&quot;">
+      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\silmo.DESKTOP-578FB84\Documents\Final Project ADSTA\proyect\test\index.spec.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\silmo.DESKTOP-578FB84\Documents\Final Project ADSTA\proyect\test\index.spec.js)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="payment check" timestamp="2021-12-13T00:40:27" tests="3" file="C:\Users\silmo.DESKTOP-578FB84\Documents\Final Project ADSTA\proyect\test\payment.spec.js" time="2.5140" failures="2">
+    <testcase name="payment check Should generate an random price" time="0.5120" classname="Should generate an random price">
+    </testcase>
+    <testcase name="payment check &quot;after each&quot; hook for &quot;Should generate 5 random prices&quot;" time="0.0000" classname="&quot;after each&quot; hook for &quot;Should generate 5 random prices&quot;">
+      <failure message="done() called multiple times" type="Error"><![CDATA[Error: done() called multiple times
+    at C:\Users\silmo.DESKTOP-578FB84\Documents\Final Project ADSTA\proyect\test\payment.spec.js:35:21]]></failure>
+    </testcase>
+    <testcase name="payment check &quot;before each&quot; hook for &quot;Should generate 5 random prices&quot;" time="2.0020" classname="&quot;before each&quot; hook for &quot;Should generate 5 random prices&quot;">
+      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\silmo.DESKTOP-578FB84\Documents\Final Project ADSTA\proyect\test\payment.spec.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\silmo.DESKTOP-578FB84\Documents\Final Project ADSTA\proyect\test\payment.spec.js)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
