@@ -30,7 +30,7 @@ describe('payment check', () => {
         if (agent) {
             agent.close();
         }
-        done();
+        // done();
         utils.removeFile(PAYMENT_FILE_PATH)
         .then(() => done() )
     });
