@@ -1,5 +1,9 @@
+var StatsD = require('hot-shots');
+var dogstatsd = new StatsD();
+
 module.exports = {
     getAll: function (req, res) {
+        dogstatsd.increment('operations.getAll');
         res.status(201)
         .json({
             'options': {
@@ -12,6 +16,7 @@ module.exports = {
         .send();
     },
     sum: function (req, res) {
+        dogstatsd.increment('operations.sum');
         const {a, b} = req.body
         res.status(201).json({
             'suma': `${a} + ${b} = ${parseFloat(a) + parseFloat(b)}`
@@ -19,6 +24,7 @@ module.exports = {
     },
 
     substract: function (req, res) {
+        dogstatsd.increment('operations.substract');
         const {a, b} = req.body
         res.status(201).json({
             'resta': `${a} - ${b} = ${parseFloat(a) - parseFloat(b)}`
@@ -26,6 +32,7 @@ module.exports = {
     },
 
     multiply: function (req, res) {
+        dogstatsd.increment('operations.multiply');
         const {a, b} = req.body
         res.status(201).json({
             'multiplicacion': `${a} x ${b} = ${parseFloat(a) * parseFloat(b)}`
@@ -33,6 +40,7 @@ module.exports = {
     },
 
     divide: function (req, res) {
+        dogstatsd.increment('operations.divide');
         const {a, b} = req.body
         const result = parseFloat(a) / parseFloat(b)
         res.status(201).json({

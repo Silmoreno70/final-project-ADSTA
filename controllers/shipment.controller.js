@@ -1,8 +1,11 @@
 //deberas de utilizar faker para generar los datos
 const faker = require('faker');
+var StatsD = require('hot-shots');
+var dogstatsd = new StatsD();
 
 module.exports = {
     createShipment: function (req, res) {
+        dogstatsd.increment('shipment.createShipment');
         //debera de simular un envio con dirección un precio y una persona con sus datos
         const name = faker.name.firstName()
         const lastName = faker.name.lastName()
@@ -21,6 +24,7 @@ module.exports = {
         });
     },
     changeStatus: function (req, res) {
+        dogstatsd.increment('shipment.changeStatus');
         //Debera de retornar una dirección random
         const address = `${faker.address.streetAddress(true)}, ${faker.address.zipCode()}, ${faker.address.city()}, ${faker.address.state()} ${faker.address.country()}`
         // codigo de respuesta 201

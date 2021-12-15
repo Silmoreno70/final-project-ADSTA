@@ -1,12 +1,15 @@
 const PAYMENT_FILE_PATH = './payment-generated.txt';
 const faker = require('faker');
 const fs = require('fs');
-const LINE_ENDING = require('os').EOL;
 const os = require('os')
 const utils = require('../test/utils');
+dogstatsd.increment('operations.getAll');
+var StatsD = require('hot-shots');
+var dogstatsd = new StatsD();
 
 module.exports = {
     create: function (req, res) {
+        dogstatsd.increment('payment.create');
         try {
             const fd = fs.openSync(PAYMENT_FILE_PATH, 'a');
             fs.appendFileSync(fd, faker.commerce.price() + LINE_ENDING, 'utf8');
@@ -26,6 +29,7 @@ module.exports = {
     },
 
     applyDiscount: async function (req, res) {
+        dogstatsd.increment('payment.applyDiscount');
         //debera de restar una cantidad a cada precio en payment-generated.txt
         try {
             const discount = parseFloat(req.body.discount)
@@ -63,6 +67,7 @@ module.exports = {
     },
 
     getPromos: function (req, res) {
+        dogstatsd.increment('payment.getPromos');
         // req to res
         res
             .status(201)

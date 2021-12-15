@@ -4,14 +4,14 @@ const Tracing = require("@sentry/tracing");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var indexRouter = require('./routes/index');
 var tasksRouter = require('./routes/tasks');
 var authRouter = require('./routes/auth');
 var paymentRouter = require('./routes/payment');
 var shipmentRouter = require('./routes/shipment');
 var operationRouter = require('./routes/operations');
-
+var StatsD = require('hot-shots');
+var dogstatsd = new StatsD();
 var app = express();
 
 Sentry.init({
@@ -67,8 +67,6 @@ app.use('/payment', paymentRouter);
 app.use('/shipment', shipmentRouter);
 app.use('/operations', operationRouter);
 
-
-
-
-
 module.exports = app;
+// Conuter
+dogstatsd.increment('app.counter');
