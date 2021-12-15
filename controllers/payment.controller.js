@@ -2,8 +2,8 @@ const PAYMENT_FILE_PATH = './payment-generated.txt';
 const faker = require('faker');
 const fs = require('fs');
 const os = require('os')
+const LINE_ENDING = os.EOL;
 const utils = require('../test/utils');
-dogstatsd.increment('operations.getAll');
 var StatsD = require('hot-shots');
 var dogstatsd = new StatsD();
 
