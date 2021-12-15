@@ -33,7 +33,6 @@ jobs:
       - name: Ejecuta los test de nuestro proyecto
         run: npm run test
         # deploy to heroku
-      - uses: actions/checkout@v2
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
