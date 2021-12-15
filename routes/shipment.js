@@ -4,11 +4,11 @@ var shipmentController = require('../controllers/shipment.controller');
 var middleware = require('../middleware');
 
 
-router.get('/:id', shipmentController.getById);
+// router.get('/:id', shipmentController.getById);
+
+router.post('/create', shipmentController.createShipment)
+router.get('/', shipmentController.changeStatus);
+
 router.use(middleware);
-
-router.post('/', shipmentController.create)
-router.get('/', shipmentController.getAll);
-
 
 module.exports = router;

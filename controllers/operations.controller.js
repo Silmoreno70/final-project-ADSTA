@@ -6,7 +6,7 @@ module.exports = {
                 'suma': '/operations/sum',
                 'resta': '/operations/substract',
                 'multiplicacion': '/operations/multiply',
-                'divicion': '/operations/divide'
+                'division': '/operations/divide'
             }
         })
         .send();
