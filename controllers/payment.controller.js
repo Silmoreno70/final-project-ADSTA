@@ -10,7 +10,7 @@ module.exports = {
         try {
             const fd = fs.openSync(PAYMENT_FILE_PATH, 'a');
             fs.appendFileSync(fd, faker.commerce.price() + LINE_ENDING, 'utf8');
-            re
+            res
                 .status(201)
                 .json({
                     'message': 'created! 😉'
