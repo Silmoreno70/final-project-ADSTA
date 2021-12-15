@@ -15,6 +15,6 @@ RUN npm install -g mocha
 # Bundle app source
 COPY . .
 
-EXPOSE 3000-3080
-# CMD [ "npm", "run", "test" ]
-CMD [ "npm", "start" ]
+EXPOSE 3000
+CMD [ "npm", "run", "test" ]
+# CMD [ "npm", "start" ]
