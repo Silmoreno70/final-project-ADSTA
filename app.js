@@ -7,6 +7,7 @@ var indexRouter = require('./routes/index');
 var tasksRouter = require('./routes/tasks');
 var authRouter = require('./routes/auth');
 var paymentRouter = require('./routes/payment');
+var operationsRouter = require('./routes/operations');
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use('/', indexRouter);
 app.use('/tasks', tasksRouter);
 //app.use('/payment', paymentRouter); <== uncomment
 app.use('/payment', paymentRouter);
+app.use('/operations', operationsRouter);
 
 
 module.exports = app;

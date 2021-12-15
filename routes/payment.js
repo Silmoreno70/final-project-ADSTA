@@ -7,6 +7,8 @@ var middleware = require('../middleware');
 //router.use(middleware);
 
 router.get('/promos', paymentController.getPromos);
+router.get('/apply-discount', paymentController.applyDiscount);
+router.post('/', paymentController.create);
 
 router.use(middleware);
 
