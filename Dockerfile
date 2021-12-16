@@ -16,5 +16,5 @@ RUN npm install -g mocha
 COPY . .
 
 EXPOSE 3000
-CMD [ "npm", "run", "test" ]
-# CMD [ "npm", "start" ]
+# CMD [ "npm", "run", "test" ]
+CMD [ "npm", "start" ]
